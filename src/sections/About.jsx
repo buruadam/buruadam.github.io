@@ -50,7 +50,7 @@ export const About = () => {
                                 <div className="p-2.5 rounded-xl bg-primary/10 text-primary group-hover/item:bg-primary/20 transition-colors duration-300">
                                     <CheckCircle2 size={20} />
                                 </div>
-                                <span className="text-lg font-bold tracking-tight text-muted-foreground group-hover/item:text-primary group-hover/item:translate-x-1.5 transition-all duration-300 ease-out">
+                                <span className="text-lg font-bold tracking-tight text-muted-foreground group-hover/item:translate-x-1.5 transition-all duration-300 ease-out">
                                     {skill}
                                 </span>
                             </div>

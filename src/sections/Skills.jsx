@@ -74,7 +74,7 @@ export const Skills = () => {
                                                 <Icon name={skill.name} className={`w-7 h-7 ${skill.isDark ? "dark:invert" : ""}`} />
                                             </div>
 
-                                            <span className="text-base font-bold tracking-tight text-muted-foreground group-hover/item:text-primary group-hover/item:translate-x-1.5 transition-all duration-300 ease-out inline-block">
+                                            <span className="text-base font-bold tracking-tight text-muted-foreground group-hover/item:translate-x-1.5 transition-all duration-300 ease-out inline-block">
                                                 {skill.label}
                                             </span>
                                         </li>

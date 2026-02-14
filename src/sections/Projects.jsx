@@ -46,7 +46,7 @@ export const Projects = () => {
                             </div>
 
                             <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                                <h3 className="text-2xl font-bold mb-4 transition-colors">
                                     {project.title}
                                 </h3>
 
