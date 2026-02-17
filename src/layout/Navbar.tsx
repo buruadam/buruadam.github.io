@@ -21,7 +21,7 @@ export const Navbar = () => {
             threshold: 0
         };
 
-        const observerCallback = (entries) => {
+        const observerCallback = (entries: IntersectionObserverEntry[]) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const id = `#${entry.target.id}`;
@@ -53,7 +53,7 @@ export const Navbar = () => {
             observer.disconnect();
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [navLinks]);
 
     return (
         <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border transition-colors duration-300">
