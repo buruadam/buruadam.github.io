@@ -17,8 +17,8 @@ export const ThemeToggle = () => {
     };
 
     return (
-        <button 
-            onClick={toggleTheme} 
+        <button
+            onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-foreground/10 transition-colors cursor-pointer"
         >
             {isDarkMode ? <Sun /> : <Moon />}
