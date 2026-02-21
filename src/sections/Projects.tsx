@@ -16,6 +16,20 @@ export const Projects = () => {
             tech: ['JavaScript', 'React', 'Tailwind CSS', 'Lucide React', 'Vite'],
             link: "https://github.com/buruadam/buruadam.github.io",
         },
+        {
+            title: "Timemanager Android Application",
+            image: "/projects/timemanager-app.png",
+            description: "A modern Android client application developed as a thesis project, offering comprehensive task management, Pomodoro timer, and JWT-based authentication with Ktor-based server-side synchronization.",
+            tech: ['Kotlin', 'Jetpack Compose', 'Ktor Client', 'Koin', 'MVVM'],
+            link: "https://github.com/buruadam/Timemanager",
+        },
+        {
+            title: "Timemanager Backend API",
+            image: "",
+            description: "A robust REST API developed to handle user authentication and data synchronization for the Timemanager mobile application, featuring persistent storage and optimized JSON responses.",
+            tech: ['Kotlin', 'Ktor', 'Koin', 'Exposed ORM', 'MySQL', 'MockK'],
+            link: "https://github.com/buruadam/ktor-timemanager-server",
+        },
     ];
 
     return (
