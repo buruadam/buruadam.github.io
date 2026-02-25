@@ -1,10 +1,13 @@
 import { Layers, Terminal, Database, Layout } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Icon from "tech-stack-icons";
 
 export const Skills = () => {
+    const { t } = useTranslation();
+
     const categories = [
         {
-            name: "Backend",
+            name: t('skills.categories.backend'),
             icon: <Terminal size={22} />,
             skills: [
                 { name: "java", label: "Java" },
@@ -16,7 +19,7 @@ export const Skills = () => {
             ]
         },
         {
-            name: "Frontend",
+            name: t('skills.categories.frontend'),
             icon: <Layout size={22} />,
             skills: [
                 { name: "react", label: "React" },
@@ -28,7 +31,7 @@ export const Skills = () => {
             ]
         },
         {
-            name: "Database and tools",
+            name: t('skills.categories.tools'),
             icon: <Database size={22} />,
             skills: [
                 { name: "mysql", label: "MySQL" },
@@ -44,9 +47,9 @@ export const Skills = () => {
         <section id="skills" className="py-24 px-6">
             <div className="max-w-6xl mx-auto">
                 <div className="flex items-center gap-2 text-primary font-semibold mb-4">
-                    <Layers size={24} /> <span>Stack</span>
+                    <Layers size={24} /> <span>{t('skills.badge')}</span>
                 </div>
-                <h2 className="text-4xl font-bold mb-12">Technologies</h2>
+                <h2 className="text-4xl font-bold mb-12">{t('skills.title')}</h2>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {categories.map((cat, i) => (

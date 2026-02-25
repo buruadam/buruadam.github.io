@@ -14,9 +14,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
+    "i18next": "^25.8.13",
     "lucide-react": "^0.568.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-i18next": "^16.5.4",
     "tailwindcss": "^4.1.18",
     "tech-stack-icons": "^3.5.8"
   },

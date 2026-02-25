@@ -1,14 +1,17 @@
 import { GraduationCap, Calendar, MapPin } from "lucide-react"
+import { useTranslation } from "react-i18next";
+
+interface Study {
+    degree: string;
+    school: string;
+    location: string;
+    period: string;
+}
 
 export const Education = () => {
-    const studies = [
-        {
-            degree: 'Computer Science Bsc',
-            school: 'Eszterházy Károly Catholic University',
-            location: 'Eger, Hungary',
-            period: '2022 - 2025',
-        },
-    ];
+    const { t } = useTranslation();
+
+    const studies = t('education.studies', { returnObjects: true }) as Study[];
 
     return (
         <section id="education" className="py-24 px-6 relative overflow-hidden">
@@ -16,10 +19,10 @@ export const Education = () => {
             <div className="max-w-6xl mx-auto relative z-10">
 
                 <div className="flex items-center gap-2 text-primary font-semibold mb-4 uppercase tracking-widest text-sm">
-                    <GraduationCap size={18} /> <span>Academic Journey</span>
+                    <GraduationCap size={18} /> <span>{t('education.badge')}</span>
                 </div>
 
-                <h2 className="text-4xl font-bold mb-16">Education</h2>
+                <h2 className="text-4xl font-bold mb-16">{t('education.title')}</h2>
 
                 <div className="max-w-4xl">
                     <div className="relative border-l-2 border-border ml-3 md:ml-6 space-y-16">

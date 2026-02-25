@@ -1,0 +1,100 @@
+{
+  "name": "Ádám Buru",
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "status": "Open to work",
+    "title": "Hi, I'm <0>Ádám Buru</0>. <1/><2>Full-stack</2> Developer.",
+    "description": "I focus on building <0>stable</0> and <1>efficient</1> applications.<2/>I value <3>clean code</3> and developing software that is easy to <4>maintain</4>.",
+    "download_cv": "Download Resume",
+    "cv_hu": "Hungarian (HU)",
+    "cv_en": "English (EN)",
+    "follow_me": "Follow me:"
+  },
+  "about": {
+    "badge": "About Me",
+    "title": "Ready for the next challenge",
+    "description_p1": "I strive to turn the knowledge gained at university into high-quality software. My goal is to ensure that my code remains clean and reliable in the long run.",
+    "description_p2": "I'm a fast learner with a proactive mindset, always eager to master new frameworks. My approach is defined by high attention to detail and clear communication.",
+    "description_p3": " I am open to professional challenges where I can work on innovative solutions while continuously expanding my developer toolkit.",
+    "skills_title": "Technical Skills",
+    "skills_list": [
+      "Git version control",
+      "Test Driven Development",
+      "Containerization with Docker",
+      "REST API development",
+      "API Testing with Postman"
+    ]
+  },
+  "skills": {
+    "badge": "Stack",
+    "title": "Technologies",
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "tools": "Database and tools"
+    }
+  },
+  "projects": {
+    "badge": "Portfolio",
+    "title": "Featured Projects",
+    "view_on_github": "View on GitHub",
+    "view_all": "View My Projects on GitHub",
+    "items": {
+      "cv_processor": {
+        "title": "AI Resume Evaluator",
+        "description": "This application leverages Large Language Models to extract specific fields from resumes and validate the extracted data according to established rules."
+      },
+      "portfolio": {
+        "title": "Portfolio Page",
+        "description": "A modern portfolio page. Built with React and Tailwind CSS, featuring dynamic dark mode, custom-themed UI and responsive layouts."
+      },
+      "timemanager_app": {
+        "title": "Timemanager Android Application",
+        "description": "A modern Android client application developed as a thesis project, offering comprehensive task management, Pomodoro timer, and JWT-based authentication with Ktor-based server-side synchronization."
+      },
+      "timemanager_api": {
+        "title": "Timemanager Backend API",
+        "description": "A robust REST API developed to handle user authentication and data synchronization for the Timemanager mobile application, featuring persistent storage and optimized JSON responses."
+      }
+    }
+  },
+  "education": {
+    "badge": "Academic Journey",
+    "title": "Education",
+    "studies": [
+      {
+        "degree": "Computer Science BSc",
+        "school": "Eszterházy Károly Catholic University",
+        "location": "Eger, Hungary",
+        "period": "2022 - 2025"
+      }
+    ]
+  },
+  "experience": {
+    "badge": "Career Path",
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "role": "IT Intern",
+        "company": "Samsung Electronics Magyar Zrt.",
+        "location": "Jászfényszaru, Hungary",
+        "period": "2023 - 2024",
+        "description": [
+          "Participating in the design and implementation of database-driven IT systems.",
+          "Ensuring the up-to-date status of user workstations and providing technical troubleshooting support.",
+          "Installing and repairing hardware devices and supporting network infrastructure development. "
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

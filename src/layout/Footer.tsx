@@ -1,20 +1,22 @@
 import { Github, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const socialLinks = [
     { icon: Github, href: "https://github.com/buruadam", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com/in/adam-buru", label: "LinkedIn" },
 ];
 
-const footerLinks = [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#education", label: "Education" },
-    { href: "#experience", label: "Experience" },
-];
-
 export const Footer = () => {
+    const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
+
+    const footerLinks = [
+        { href: "#about", label: t('nav.about') },
+        { href: "#skills", label: t('nav.skills') },
+        { href: "#projects", label: t('nav.projects') },
+        { href: "#education", label: t('nav.education') },
+        { href: "#experience", label: t('nav.experience') },
+    ];
 
     return (
         <footer className="py-12 border-t border-border bg-card transition-color duration-300">
@@ -23,10 +25,10 @@ export const Footer = () => {
 
                     <div className="text-center md:text-left">
                         <a href="#" className="text-xl font-bold tracking-tight">
-                            Ádám Buru
+                            {t('name')}
                         </a>
                         <p className="text-sm text-muted-foreground mt-2">
-                            © {currentYear} Ádám Buru. All rights reserved.
+                            © {currentYear} {t('name')}. {t('footer.rights')}
                         </p>
                     </div>
 

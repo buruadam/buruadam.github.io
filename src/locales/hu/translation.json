@@ -1,0 +1,100 @@
+{
+  "name": "Buru Ádám",
+  "nav": {
+    "about": "Rólam",
+    "skills": "Készségek",
+    "projects": "Projektek",
+    "education": "Tanulmányok",
+    "experience": "Tapasztalat",
+    "contact": "Kapcsolat"
+  },
+  "hero": {
+    "status": "Munkalehetőségre nyitott",
+    "title": "Szia, <0>Buru Ádám</0> vagyok. <1/><2>Full-stack</2> fejlesztő.",
+    "description": "<0>Stabil</0> és <1>hatékony</1> alkalmazások készítésére fókuszálok.<2/>Fontosnak tartom a <3>tiszta kódot</3> és a jól <4>karbantartható</4> szoftverek fejlesztését.",
+    "download_cv": "Önéletrajz letöltése",
+    "cv_hu": "Magyar (HU)",
+    "cv_en": "Angol (EN)",
+    "follow_me": "Kövess:"
+  },
+  "about": {
+    "badge": "Rólam",
+    "title": "Készen a következő kihívásra",
+    "description_p1": "Az egyetemen megszerzett tudást igyekszem magas minőségű szoftverekké alakítani. Arra törekszem, hogy a kódom hosszú távon is átlátható és megbízható maradjon.",
+    "description_p2": "Gyorsan tanulok, proaktív szemlélettel és kíváncsisággal sajátítok el új keretrendszereket. Megközelítésemet a részletekre való odafigyelés és a tiszta kommunikáció jellemzi.",
+    "description_p3": "Nyitott vagyok a szakmai kihívásokra, ahol innovatív megoldásokon dolgozhatok, miközben folyamatosan bővítem a fejlesztői eszköztáramat.",
+    "skills_title": "Technikai készségek",
+    "skills_list": [
+      "Git verziókezelés",
+      "Tesztvezérelt fejlesztés",
+      "Konténerizáció Dockerrel",
+      "REST API fejlesztés",
+      "API tesztelés Postmannel"
+    ]
+  },
+  "skills": {
+    "badge": "Stack",
+    "title": "Technológiák",
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "tools": "Adatbázis és eszközök"
+    }
+  },
+  "projects": {
+    "badge": "Portfólió",
+    "title": "Kiemelt Projektek",
+    "view_on_github": "Megtekintés GitHubon",
+    "view_all": "Összes projektem megtekintése a GitHubon",
+    "items": {
+      "cv_processor": {
+        "title": "AI Önéletrajz Értékelő",
+        "description": "Az alkalmazás nagy nyelvi modellek segítségével adatkinyerést végez önéletrajzokon, majd a meghatározott kritériumok alapján validálja azokat."
+      },
+      "portfolio": {
+        "title": "Portfólió Oldal",
+        "description": "Modern portfólió oldal React és Tailwind CSS használatával. Dinamikus sötét móddal, egyedi témájú felülettel és reszponzív elrendezéssel."
+      },
+      "timemanager_app": {
+        "title": "Timemanager Android Alkalmazás",
+        "description": "Szakdolgozati projektként készült modern Android kliens, amely feladatkezelést, Pomodoro időzítőt és JWT alapú hitelesítést kínál Ktor alapú szerveroldali szinkronizációval."
+      },
+      "timemanager_api": {
+        "title": "Timemanager Backend API",
+        "description": "REST API a Timemanager mobilalkalmazás felhasználói hitelesítéséhez és adatszinkronizációjához, perzisztens tárolással és optimalizált JSON válaszokkal."
+      }
+    }
+  },
+  "education": {
+    "badge": "Tanulmányok",
+    "title": "Végzettség",
+    "studies": [
+      {
+        "degree": "Programtervező informatikus BSc",
+        "school": "Eszterházy Károly Katolikus Egyetem",
+        "location": "Eger, Magyarország",
+        "period": "2022 - 2025"
+      }
+    ]
+  },
+  "experience": {
+    "badge": "Karrierút",
+    "title": "Szakmai Tapasztalat",
+    "jobs": [
+      {
+        "role": "IT gyakornok",
+        "company": "Samsung Electronics Magyar Zrt.",
+        "location": "Jászfényszaru, Magyarország",
+        "period": "2023 - 2024",
+        "description": [
+          "Részvétel adatbázis-alapú informatikai rendszerek tervezésében és megvalósításában.",
+          "A felhasználók munkaállomásainak naprakész állapotának biztosítása és technikai hibaelhárítási támogatás nyújtása.",
+          "Hardvereszközök telepítése, javítása, valamint a hálózati infrastruktúra fejlesztésének támogatása."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "rights": "Minden jog fenntartva."
+  }
+}

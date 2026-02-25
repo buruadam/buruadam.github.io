@@ -1,5 +1,6 @@
 import { ChevronDown, Download, FileText, Github, Linkedin } from "lucide-react"
 import { useEffect, useRef, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 const socialLinks = [
     { icon: Github, href: "https://github.com/buruadam", label: "GitHub" },
@@ -7,7 +8,7 @@ const socialLinks = [
 ];
 
 export const Hero = () => {
-
+    const { t } = useTranslation();
     const [isResumeOpen, setIsResumeOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
@@ -30,25 +31,31 @@ export const Hero = () => {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
                     </span>
-                    Open to work
+                    {t('hero.status')}
                 </div>
 
-                <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
-                    Hi, I'm <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        Ádám Buru
-                    </span>. <br />
-                    I build <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        scalable
-                    </span> software with <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        precision
-                    </span>.
+                <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-[1.1] md:leading-tight">
+                    <Trans
+                        i18nKey="hero.title"
+                        components={[
+                            <span key="0" className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" />,
+                            <br key="1" />,
+                            <span key="2" className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" />
+                        ]}
+                    />
                 </h1>
 
                 <p className="text-lg text-muted mb-10 max-w-2xl mx-auto">
-                    I am a <span className="text-foreground font-semibold">Software Engineer</span> passionate about building
-                    <span className="text-foreground font-medium"> scalable</span> and <span className="text-foreground font-medium">maintainable</span> applications.
-                    I focus on transforming complex technical concepts into
-                    <span className="text-foreground font-medium"> high-quality, clean</span> and <span className="text-foreground font-medium">efficient</span> digital solutions.
+                    <Trans
+                        i18nKey="hero.description"
+                        components={[
+                            <span key="0" className="text-foreground font-semibold" />,
+                            <span key="1" className="text-foreground font-medium" />,
+                            <br key="2" />,
+                            <span key="3" className="text-foreground font-medium" />,
+                            <span key="4" className="text-foreground font-medium" />
+                        ]}
+                    />
                 </p>
 
                 <div className="flex flex-wrap justify-center items-center gap-4">
@@ -59,7 +66,7 @@ export const Hero = () => {
                             className="flex items-center gap-2 px-8 py-4 bg-success text-white rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-success/20 cursor-pointer"
                         >
                             <Download size={20} />
-                            Download Resume
+                            {t('hero.download_cv')}
                             <ChevronDown size={18} className={`transition-transform ${isResumeOpen ? 'rotate-180' : ''}`} />
                         </button>
 
@@ -71,7 +78,12 @@ export const Hero = () => {
                                     className="flex items-center gap-3 px-4 py-3 hover:bg-muted/10 transition text-foreground font-medium border-b border-border"
                                 >
                                     <FileText size={16} className="text-foreground" />
-                                    Hungarian (HU)
+                                    <img
+                                        src="./flags/hu.png"
+                                        alt="HU"
+                                        className="w-6 h-4 object-cover"
+                                    />
+                                    {t('hero.cv_hu')}
                                     <Download size={16} />
                                 </a>
                                 <a
@@ -80,7 +92,12 @@ export const Hero = () => {
                                     className="flex items-center gap-3 px-4 py-3 hover:bg-muted/10 transition text-foreground font-medium"
                                 >
                                     <FileText size={16} className="text-foreground" />
-                                    English (EN)
+                                    <img
+                                        src="./flags/en.png"
+                                        alt="EN"
+                                        className="w-6 h-4 object-cover"
+                                    />
+                                    {t('hero.cv_en')}
                                     <Download size={16} />
                                 </a>
                             </div>
@@ -90,7 +107,7 @@ export const Hero = () => {
                     <div className="flex items-center gap-4">
 
                         <span className="font-bold tracking-widest text-muted-foreground">
-                            Follow me:
+                            {t('hero.follow_me')}
                         </span>
 
                         {socialLinks.map((social) => (

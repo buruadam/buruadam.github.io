@@ -1,19 +1,18 @@
 import { Briefcase, Calendar, MapPin } from "lucide-react"
+import { useTranslation } from "react-i18next";
+
+interface Job {
+    role: string;
+    company: string;
+    location: string;
+    period: string;
+    description: string[];
+}
 
 export const Experience = () => {
-    const experiences = [
-        {
-            role: 'IT Intern',
-            company: 'Samsung Electronics Magyar Zrt.',
-            location: 'Jászfényszaru, Hungary',
-            period: '2023 - 2024',
-            description: [
-                'Assisted in the design and implementation of database-driven IT systems, focusing on data integrity and performance.',
-                'Ensured peak performance of user workstations and provided technical troubleshooting to minimize downtime.',
-                'Supported network infrastructure development and managed hardware installations and repairs.'
-            ]
-        }
-    ];
+    const { t } = useTranslation();
+
+    const experiences = t('experience.jobs', { returnObjects: true }) as Job[];
 
     return (
         <section id="experience" className="py-24 px-6 relative overflow-hidden">
@@ -21,10 +20,10 @@ export const Experience = () => {
             <div className="max-w-6xl mx-auto relative z-10">
 
                 <div className="flex items-center gap-2 text-primary font-semibold mb-4 uppercase tracking-widest text-sm">
-                    <Briefcase size={18} /> <span>Career Path</span>
+                    <Briefcase size={18} /> <span>{t('experience.badge')}</span>
                 </div>
 
-                <h2 className="text-4xl font-bold mb-16">Work Experience</h2>
+                <h2 className="text-4xl font-bold mb-16">{t('experience.title')}</h2>
 
                 <div className="max-w-4xl">
                     <div className="relative border-l-2 border-border ml-3 md:ml-6 space-y-16">

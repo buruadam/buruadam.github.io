@@ -1,13 +1,10 @@
 import { User, CheckCircle2, Cpu } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
-    const skills = [
-        'Git version control',
-        'Test Driven Development',
-        'Containerization with Docker',
-        'REST API development',
-        'API Testing with Postman',
-    ];
+    const { t } = useTranslation();
+
+    const skills = t('about.skills_list', { returnObjects: true }) as string[];
 
     return (
         <section id="about" className="py-24 px-6 overflow-hidden">
@@ -15,22 +12,15 @@ export const About = () => {
 
                 <div className="space-y-6">
                     <div className="flex items-center gap-2 text-primary font-semibold mb-4">
-                        <User size={20} /> <span>About Me</span>
+                        <User size={20} /> <span>{t('about.badge')}</span>
                     </div>
 
-                    <h2 className="text-4xl font-bold mb-6 italic">Bridging Theory and Practice</h2>
+                    <h2 className="text-4xl font-bold mb-6 italic">{t('about.title')}</h2>
 
                     <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-                        <p>
-                            As a university graduate, I thrive on turning academic foundations into
-                            high-quality software. I don't just write code, I focus on building
-                            sustainable and scalable systems.
-                        </p>
-                        <p>
-                            I'm a fast learner with a proactive mindset, always eager to master new
-                            frameworks. My approach is defined by high attention to detail and
-                            clear communication.
-                        </p>
+                        <p>{t('about.description_p1')}</p>
+                        <p>{t('about.description_p2')}</p>
+                        <p>{t('about.description_p3')}</p>
                     </div>
 
                 </div>
@@ -38,7 +28,7 @@ export const About = () => {
                 <div className="w-full">
 
                     <div className="flex items-center gap-2 text-primary font-semibold mb-8">
-                        <Cpu size={20} /> <span>Technical Skills</span>
+                        <Cpu size={20} /> <span>{t('about.skills_title')}</span>
                     </div>
 
                     <div className="grid gap-4">

@@ -1,32 +1,35 @@
 import { Code2, ExternalLink } from "lucide-react"
+import { useTranslation } from "react-i18next";
 
 export const Projects = () => {
+    const { t } = useTranslation();
+
     const projects = [
         {
-            title: "AI Resume Evaluator",
+            title: t('projects.items.cv_processor.title'),
+            description: t('projects.items.cv_processor.description'),
             image: "/projects/resume-evaluator.png",
-            description: "An automated recruitment tool that uses Large Language Models to extract structured data from PDF resumes and score candidates based on custom job criteria.",
             tech: ['Java', 'Spring Boot', 'Spring AI', 'Ollama', 'Apache Tika', 'Gradle'],
             link: "https://github.com/buruadam/cv-processor-api",
         },
         {
-            title: "Portfolio Page",
+            title: t('projects.items.portfolio.title'),
+            description: t('projects.items.portfolio.description'),
             image: "/projects/portfolio-page.png",
-            description: "A modern portfolio page. Built with React and Tailwind CSS, featuring dynamic dark mode, custom-themed UI and responsive layouts.",
             tech: ['JavaScript', 'React', 'Tailwind CSS', 'Lucide React', 'Vite'],
             link: "https://github.com/buruadam/buruadam.github.io",
         },
         {
-            title: "Timemanager Android Application",
+            title: t('projects.items.timemanager_app.title'),
+            description: t('projects.items.timemanager_app.description'),
             image: "/projects/timemanager-app.png",
-            description: "A modern Android client application developed as a thesis project, offering comprehensive task management, Pomodoro timer, and JWT-based authentication with Ktor-based server-side synchronization.",
             tech: ['Kotlin', 'Jetpack Compose', 'Ktor Client', 'Koin', 'MVVM'],
             link: "https://github.com/buruadam/Timemanager",
         },
         {
-            title: "Timemanager Backend API",
+            title: t('projects.items.timemanager_api.title'),
+            description: t('projects.items.timemanager_api.description'),
             image: "",
-            description: "A robust REST API developed to handle user authentication and data synchronization for the Timemanager mobile application, featuring persistent storage and optimized JSON responses.",
             tech: ['Kotlin', 'Ktor', 'Koin', 'Exposed ORM', 'MySQL', 'MockK'],
             link: "https://github.com/buruadam/ktor-timemanager-server",
         },
@@ -36,9 +39,9 @@ export const Projects = () => {
         <section id="projects" className="py-24 px-6">
             <div className="max-w-6xl mx-auto">
                 <div className="flex items-center gap-2 text-primary font-semibold mb-4">
-                    <Code2 size={20} /> <span>Portfolio</span>
+                    <Code2 size={20} /> <span>{t('projects.badge')}</span>
                 </div>
-                <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
+                <h2 className="text-4xl font-bold mb-12">{t('projects.title')}</h2>
 
                 <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((project, i) => (
@@ -86,7 +89,7 @@ export const Projects = () => {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-3 px-5 py-2.5 bg-muted/10 hover:bg-primary/10 border border-border hover:border-primary/50 rounded-full text-foreground hover:text-primary transition-all duration-300 group/btn cursor-pointer shadow-sm hover:shadow-md"
                                     >
-                                        <span className="font-bold">View on GitHub</span>
+                                        <span className="font-bold">{t('projects.view_on_github')}</span>
                                         <ExternalLink
                                             size={16}
                                             className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300"
@@ -106,7 +109,7 @@ export const Projects = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-muted/10 hover:bg-primary/10 border border-border hover:border-primary/50 rounded-full text-foreground font-bold transition-all duration-300 group"
                     >
-                        <span>View My Projects on GitHub</span>
+                        <span>{t('projects.view_all')}</span>
                         <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
                 </div>

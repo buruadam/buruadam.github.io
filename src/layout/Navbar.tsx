@@ -1,18 +1,21 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "../components/ThemeToggle";
-
-const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#education", label: "Education" },
-    { href: "#experience", label: "Experience" },
-];
+import { useTranslation } from "react-i18next";
+import { LanguageToggle } from "../components/LanguageToggle";
 
 export const Navbar = () => {
+    const { t } = useTranslation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("");
+
+    const navLinks = [
+        { href: "#about", label: t('nav.about') },
+        { href: "#skills", label: t('nav.skills') },
+        { href: "#projects", label: t('nav.projects') },
+        { href: "#education", label: t('nav.education') },
+        { href: "#experience", label: t('nav.experience') },
+    ];
 
     useEffect(() => {
         const observerOptions = {
@@ -68,7 +71,7 @@ export const Navbar = () => {
                     }}
                     className="text-xl font-bold text-foreground hover:text-primary transition-colors duration-300 tracking-tighter"
                 >
-                    Ádám Buru
+                    {t('name')}
                 </a>
 
                 <div className="hidden md:flex space-x-8 font-medium uppercase">
@@ -90,10 +93,11 @@ export const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
+                    <LanguageToggle />
                     <ThemeToggle />
                     <a href="mailto:adam.buru@gmail.com" className="hidden md:block">
-                        <button className="bg-foreground text-background px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-opacity cursor-pointer">
-                            Contact
+                        <button className="min-w-[120px] bg-foreground text-background px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-opacity cursor-pointer">
+                            {t('nav.contact')}
                         </button>
                     </a>
 
@@ -124,7 +128,7 @@ export const Navbar = () => {
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="bg-foreground text-background px-5 py-3 rounded-xl text-sm font-bold text-center"
                     >
-                        Contact
+                        {t('nav.contact')}
                     </a>
                 </div>
             )}
