@@ -5,7 +5,9 @@ export const LanguageToggle = () => {
     const isHu = i18n.language === "hu";
 
     const toggleLanguage = () => {
-        i18n.changeLanguage(isHu ? "en" : "hu");
+        const newLang = isHu ? "en" : "hu";
+        i18n.changeLanguage(newLang);
+        localStorage.setItem("i18nextLng", newLang);
     };
 
     return (
