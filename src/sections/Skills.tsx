@@ -24,6 +24,7 @@ export const Skills = () => {
             skills: [
                 { name: "react", label: "React" },
                 { name: "js", label: "JavaScript" },
+                { name: "typescript", label: "TypeScript" },
                 { name: "html5", label: "HTML" },
                 { name: "css3", label: "CSS" },
                 { name: "tailwindcss", label: "Tailwind CSS" },
@@ -35,6 +36,7 @@ export const Skills = () => {
             icon: <Database size={22} />,
             skills: [
                 { name: "mysql", label: "MySQL" },
+                { name: "mariadb", label: "MariaDB" },
                 { name: "docker", label: "Docker" },
                 { name: "git", label: "Git" },
                 { name: "github", label: "GitHub", isDark: true },
