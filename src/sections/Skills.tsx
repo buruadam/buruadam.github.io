@@ -35,6 +35,7 @@ export const Skills = () => {
             name: t('skills.categories.tools'),
             icon: <Database size={22} />,
             skills: [
+                { name: "postgresql", label: "PostgreSQL" },
                 { name: "mysql", label: "MySQL" },
                 { name: "mariadb", label: "MariaDB" },
                 { name: "docker", label: "Docker" },
