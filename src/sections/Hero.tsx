@@ -73,7 +73,7 @@ export const Hero = () => {
                         {isResumeOpen && (
                             <div className="absolute top-full mt-2 w-full bg-card border border-border rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in zoom-in duration-200">
                                 <a
-                                    href="/Buru_Adam_CV_HU.pdf"
+                                    href="./cv/Buru_Adam_CV_HU.pdf"
                                     download
                                     className="flex items-center gap-3 px-4 py-3 hover:bg-muted/10 transition text-foreground font-medium border-b border-border"
                                 >
@@ -87,7 +87,7 @@ export const Hero = () => {
                                     <Download size={16} />
                                 </a>
                                 <a
-                                    href="/Buru_Adam_CV_EN.pdf"
+                                    href="./cv/Adam_Buru_CV_EN.pdf"
                                     download
                                     className="flex items-center gap-3 px-4 py-3 hover:bg-muted/10 transition text-foreground font-medium"
                                 >
